@@ -23,7 +23,7 @@ app.post('/sendMail',jsonParser, (req, res) => {
   let mailOptions = {
     from: 'jose.manuico@outlook.it',
     to: 'manujose897@gmail.com',
-    subject: 'Base64',
+    subject: 'Base64 - Contact me',
     text: req.body.msg
   };
   transporter.sendMail(mailOptions, function(error, info){
