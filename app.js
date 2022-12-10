@@ -19,12 +19,17 @@ var transporter = nodemailer.createTransport({
 
 
 app.post('/sendMail',jsonParser, (req, res) => {
-  console.log('req.body',req.body.msg)
+  console.log('req.body.msg',req.body.msg)
   let mailOptions = {
     from: 'jose.manuico@outlook.it',
     to: 'manujose897@gmail.com',
     subject: 'Base64 - Contact me',
-    text: req.body.msg
+    text: `
+    name: ${req.body.name}
+    mail: ${req.body.name}
+    msg: ${req.body.msg}
+    
+    `
   };
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
