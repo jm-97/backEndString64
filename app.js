@@ -9,8 +9,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   service: 'hotmail',
   auth: {
-    user: 'jose.manuico@outlook.it',
-    pass: 'manujose02'
+    user: 'justfortestingpurpuse@outlook.it',
+    pass: 'y3wyfwXdH$^EfsXh'
   }
 });
 
@@ -20,7 +20,7 @@ var transporter = nodemailer.createTransport({
 app.post('/sendMail',jsonParser, (req, res) => {
   console.log('req.body.msg',req.body.msg)
   let mailOptions = {
-    from: 'jose.manuico@outlook.it',
+    from: 'justfortestingpurpuse@outlook.it',
     to: 'manujose897@gmail.com',
     subject: 'Base64 - Contact me',
     text: `
